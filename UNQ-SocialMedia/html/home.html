@@ -1,15 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>theUNQ</title>
     <link rel="stylesheet" href="../css/home.css">
 </head>
+
 <body>
-    <header></header>
-    <nav></nav>
-    <main></main>
+    <div class="app-container">
+        <header id="main-header"></header>
+
+        <nav id="main-sidebar"></nav>
+
+        <main>
+            <div class="content-grid">
+                <section class="main-column">
+                    <div class="card welcome-hero">
+                        <img src="../img/hero.jpg" alt="UNQ Students" class="hero-image">
+                        <div class="hero-content">
+                            <h1>Bienvenido a theUNQ</h1>
+                            <p>theUNQ es un directorio online que conecta a los estudiantes de la Universidad Nacional
+                                de Quilmes.</p>
+                            <p>Ahora theUNQ esta disponible para todo el mundo. Puedes usar theUNQ para:</p>
+                            <ul style="margin-left: 20px; color: var(--text-muted); margin-bottom: 20px;">
+                                <li>Buscar personas en la red</li>
+                                <li>Encontrar personas que están en tus clases</li>
+                                <li>Buscar personas que están en tus amigos</li>
+                                <li>Ver una visualización de tu red social</li>
+                            </ul>
+                            <div class="login-register-actions">
+                                <a href="login.html" class="btn btn-primary">Ingresar</a>
+                                <a href="register.html" class="btn btn-outline">Registrarse</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <h2 class="card-title">Actividad reciente</h2>
+                        <p style="color: var(--text-muted); font-size: 14px;">No hay actividad reciente para mostrar.
+                            Ingresa para ver que esta pasando en tu red.</p>
+                    </div>
+                </section>
+
+                <section class="side-column">
+                    <div class="card">
+                        <h2 class="card-title">Estadísticas de la plataforma</h2>
+                        <ul class="stats-list">
+                            <li class="stats-item">
+                                <span>Total de Usuarios:</span>
+                                <span class="stats-value">1,248</span>
+                            </li>
+                            <li class="stats-item">
+                                <span>Activos hoy:</span>
+                                <span class="stats-value">342</span>
+                            </li>
+                            <li class="stats-item">
+                                <span>Conexiones Mutuas:</span>
+                                <span class="stats-value">15,892</span>
+                            </li>
+                            <li class="stats-item">
+                                <span>Grupos creados:</span>
+                                <span class="stats-value">84</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="card">
+                        <h2 class="card-title">Anuncios</h2>
+                        <p style="font-size: 13px; margin-bottom: 10px;"><strong>23 de Abril:</strong> Se murió shank!
+                        </p>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+    <script src="../js/layout.js"></script>
     <script src="../js/home.js"></script>
 </body>
+
 </html>
