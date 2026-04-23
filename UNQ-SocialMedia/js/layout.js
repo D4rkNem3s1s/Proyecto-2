@@ -67,10 +67,62 @@ function initLayout() {
             });
             return;
         }
-        if (!dropdown) {
+
+        const badge = ev.target.closest("#dev-badge");
+        const closeBtn = ev.target.closest("#roadmap-close");
+        const roadmapModal = document.getElementById("roadmap-modal");
+
+        if (badge && roadmapModal) {
+            fetchRoadmap();
+            roadmapModal.classList.add("active");
+            return;
+        }
+
+        if (closeBtn && roadmapModal) {
+            roadmapModal.classList.remove("active");
+            return;
+        }
+
+        if (!dropdown && !ev.target.closest("#roadmap-modal")) {
             document.querySelectorAll(".user-menu").forEach(i => i.classList.remove("active"));
+            if (roadmapModal) roadmapModal.classList.remove("active");
         }
     });
+}
+
+async function fetchRoadmap() {
+    const roadmapBody = document.getElementById("roadmap-body");
+    if (!roadmapBody) return;
+
+    try {
+        const response = await fetch('../theUNQ_roadmap.json');
+        const data = await response.json();
+
+        let html = '';
+
+        html += `<div class="roadmap-section"><h4>[Sprint Actual]</h4><ul class="roadmap-list">`;
+        data.sprint_actual.forEach(item => {
+            html += `<li class="roadmap-item">
+                <input type="checkbox" ${item.done ? 'checked' : ''} disabled>
+                <span class="${item.done ? 'done' : ''}">${item.task}</span>
+            </li>`;
+        });
+        html += `</ul></div>`;
+
+        html += `<div class="roadmap-section"><h4>[Pendientes]</h4><ul class="roadmap-list">`;
+        data.pendientes.forEach(item => {
+            html += `<li class="roadmap-item">
+                <input type="checkbox" ${item.done ? 'checked' : ''} disabled>
+                <span class="${item.done ? 'done' : ''}">${item.task}</span>
+            </li>`;
+        });
+        html += `</ul></div>`;
+
+        roadmapBody.innerHTML = html;
+    } catch (error) {
+        roadmapBody.innerHTML = `<p style="color: #f44747; font-size: 12px;">Error al cargar roadmap.json</p>`;
+        console.error("Error loading roadmap:", error);
+    }
 }
 
 

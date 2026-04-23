@@ -1,0 +1,35 @@
+{
+    "project": "theUNQ",
+    "sprint_actual": [
+        {
+            "task": "Feeds (Social/Global)",
+            "done": true
+        },
+        {
+            "task": "Header & Sidebar",
+            "done": true
+        }
+    ],
+    "pendientes": [
+        {
+            "task": "Mockup de Mensajes",
+            "done": false
+        },
+        {
+            "task": "Mockup de Amigos",
+            "done": false
+        },
+        {
+            "task": "Terminar páginas de registro y login",
+            "done": false
+        },
+        {
+            "task": "Tags de gustos, shank",
+            "done": false
+        },
+        {
+            "task": "Empezar el backend",
+            "done": false
+        }
+    ]
+}
