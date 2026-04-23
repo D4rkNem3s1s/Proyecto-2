@@ -47,7 +47,7 @@ function highlightActiveLink() {
     });
 }
 
-function initLayout(){
+function initLayout() {
     const componentPathPrefix = './components/';
 
     loadComponent('main-header', componentPathPrefix + 'header.html');
@@ -58,16 +58,16 @@ function initLayout(){
         const trigger = ev.target.closest(".dropdown-trigger");
         const dropdown = ev.target.closest(".user-menu");
 
-        if(trigger && dropdown){
+        if (trigger && dropdown) {
             dropdown.classList.toggle("active");
             document.querySelectorAll(".user-menu").forEach(i => {
-                if(i !== dropdown){
+                if (i !== dropdown) {
                     i.classList.remove("active");
                 }
             });
             return;
         }
-        if(!dropdown){
+        if (!dropdown) {
             document.querySelectorAll(".user-menu").forEach(i => i.classList.remove("active"));
         }
     });
@@ -75,9 +75,9 @@ function initLayout(){
 
 
 
-if(document.readyState === "loading"){
+if (document.readyState === "loading") {
     document.addEventListener("DOMContentLoaded", initLayout);
-}else{
+} else {
     initLayout();
 }
 

@@ -9,7 +9,7 @@
     --text-main: #1a1a1a;
     --text-muted: #666666;
     --header-height: 60px;
-    --sidebar-width: 180px;
+    --sidebar-width: 220px;
 }
 
 * {
@@ -79,7 +79,7 @@ header {
     top: calc(100% + 10px);
     background-color: var(--surface-color);
     min-width: 180px;
-    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
     z-index: 1000;
     border: 1px solid var(--border-color);
@@ -122,8 +122,15 @@ header {
 }
 
 @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(-10px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .logo {
@@ -164,25 +171,87 @@ nav {
     background-color: var(--surface-color);
     border-right: 1px solid var(--border-color);
     padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar-content {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.sidebar-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar-label {
+    padding: 0 20px;
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+}
+
+.sidebar-divider {
+    height: 1px;
+    background-color: var(--border-color);
+    margin: 5px 20px;
+    opacity: 0.5;
 }
 
 .nav-item {
-    display: block;
-    padding: 8px 20px;
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
     text-decoration: none;
     color: var(--text-main);
     font-size: 14px;
-    transition: background 0.2s;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    border-left: 3px solid transparent;
+    gap: 12px;
+}
+
+.nav-item i {
+    width: 20px;
+    text-align: center;
+    font-size: 16px;
+    color: var(--text-muted);
+    transition: color 0.2s;
 }
 
 .nav-item:hover {
-    background-color: var(--bg-color);
+    background-color: rgba(130, 15, 20, 0.03);
+    color: var(--primary-red);
+}
+
+.nav-item:hover i {
     color: var(--primary-red);
 }
 
 .nav-item.active {
-    font-weight: 600;
+    background-color: rgba(130, 15, 20, 0.05);
     color: var(--primary-red);
+    font-weight: 600;
+    border-left-color: var(--primary-red);
+}
+
+.nav-item.active i {
+    color: var(--primary-red);
+}
+
+.nav-item.logout:hover {
+    background-color: rgba(211, 47, 47, 0.05);
+    color: #d32f2f;
+    border-left-color: #d32f2f;
+}
+
+.nav-item.logout:hover i {
+    color: #d32f2f;
 }
 
 /* Contenido Principal */
@@ -321,4 +390,3 @@ main {
         /* Acá deberíamos de hacer la versión de teléfonos */
     }
 }
-
