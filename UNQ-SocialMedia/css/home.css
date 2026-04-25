@@ -46,7 +46,26 @@ header {
     z-index: 100;
 }
 
-/*le quitas lo divertido a programar*/
+/* Theme Changer */
+.theme-changer{
+    position: relative;
+    display: inline-block;
+}
+.change-mode{
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    color: white;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    transition: background 0.2s;
+}
+/* User Menu */
 
 .user-menu {
     position: relative;
