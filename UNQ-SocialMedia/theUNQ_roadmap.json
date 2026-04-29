@@ -10,16 +10,16 @@
             "task": "Header & Sidebar",
             "done": true,
             "assignee": "Santiago"
+        },
+        {
+            "task": "Mockup de Amigos",
+            "done": true,
+            "assignee": "Santiago"
         }
     ],
     "pendientes": [
         {
             "task": "Mockup de Mensajes",
-            "done": false,
-            "assignee": "Santiago"
-        },
-        {
-            "task": "Mockup de Amigos",
             "done": false,
             "assignee": "Santiago"
         },
