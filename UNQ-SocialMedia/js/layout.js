@@ -20,6 +20,15 @@ async function loadComponent(elementId, filePath) {
             if (elementId === 'main-sidebar') {
                 highlightActiveLink();
             }
+            if (elementId === 'main-header') {
+                if (localStorage.getItem('theme') === 'dark') {
+                    const themeIcon = element.querySelector('.change-mode i');
+                    if (themeIcon) {
+                        themeIcon.classList.remove('fa-moon');
+                        themeIcon.classList.add('fa-sun');
+                    }
+                }
+            }
         } else {
             console.error(`Error al cargar el componente: ${filePath}`);
         }
@@ -55,6 +64,22 @@ function initLayout() {
 
     /*dropdawn*/
     document.addEventListener("click", (ev) => {
+        const themeBtn = ev.target.closest(".change-mode");
+        if (themeBtn) {
+            document.body.classList.toggle("dark-theme");
+            const icon = themeBtn.querySelector("i");
+            if (document.body.classList.contains("dark-theme")) {
+                icon.classList.remove("fa-moon");
+                icon.classList.add("fa-sun");
+                localStorage.setItem("theme", "dark");
+            } else {
+                icon.classList.remove("fa-sun");
+                icon.classList.add("fa-moon");
+                localStorage.setItem("theme", "light");
+            }
+            return;
+        }
+
         const trigger = ev.target.closest(".dropdown-trigger");
         const dropdown = ev.target.closest(".user-menu");
 
@@ -126,6 +151,10 @@ async function fetchRoadmap() {
 }
 
 
+
+if (localStorage.getItem("theme") === "dark") {
+    document.body.classList.add("dark-theme");
+}
 
 if (document.readyState === "loading") {
     document.addEventListener("DOMContentLoaded", initLayout);
