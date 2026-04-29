@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,16 +9,101 @@
     <link rel="stylesheet" href="../css/messages.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
+
 <body>
     <div class="app-container">
         <header id="main-header"></header>
         <nav id="main-sidebar"></nav>
-        <main>
-            <div></div>
-            <section id="contacts"></section>
-            <footer id="input-chat"></footer>
+        <main class="messages-layout">
+            <section class="chat-area">
+                <header class="chat-header">
+                    <div class="chat-contact-info">
+                        <img src="https://i.pravatar.cc/150?u=friends1" alt="Avatar" class="chat-avatar">
+                        <div>
+                            <h3>Martina González</h3>
+                        </div>
+                    </div>
+                </header>
+
+                <div class="chat-history">
+                    <div class="message received">
+                        <p>Che, ¿Hoy vas a Objetos 1?</p>
+                        <span class="message-time">10:30</span>
+                    </div>
+                    <div class="message sent">
+                        <p>Flaco, dijeron que había paro, mirá el mail.</p>
+                        <span class="message-time">10:35</span>
+                    </div>
+                    <div class="message received">
+                        <p>Uh lpm. Yo ya estoy acá. Paso a la biblioteca a repasar un poco, y en un rato me vuelvo.</p>
+                        <span class="message-time">10:36</span>
+                    </div>
+                    <div class="message sent">
+                        <p>La próxima revisá antes de ir, pt.</p>
+                        <span class="message-time">10:42</span>
+                    </div>
+                </div>
+
+                <footer class="chat-input-area">
+                    <input type="text" placeholder="Escribe un mensaje..." class="chat-input-field">
+                    <button class="icon-btn send-btn"><i class="fas fa-paper-plane"></i></button>
+                </footer>
+            </section>
+
+            <aside class="contacts-sidebar">
+                <div class="sidebar-header">
+                    <h2>Mensajes</h2>
+                    <div class="local-search">
+                        <i class="fas fa-search"></i>
+                        <input type="text" placeholder="Buscar chats...">
+                    </div>
+                </div>
+                <div class="contacts-list">
+                    <div class="contact-item active">
+                        <img src="https://i.pravatar.cc/150?u=friends1" alt="Avatar" class="contact-avatar">
+                        <div class="contact-info">
+                            <div class="contact-top">
+                                <h4>Martina González</h4>
+                                <span class="time">10:42</span>
+                            </div>
+                            <p>La próxima revisá antes de ir, pt.</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <img src="https://i.pravatar.cc/150?u=friends2" alt="Avatar" class="contact-avatar">
+                        <div class="contact-info">
+                            <div class="contact-top">
+                                <h4>Lucas Fernández</h4>
+                                <span class="time">Ayer</span>
+                            </div>
+                            <p>¿Pudiste hacer el TP 3?</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <img src="https://i.pravatar.cc/150?u=friends3" alt="Avatar" class="contact-avatar">
+                        <div class="contact-info">
+                            <div class="contact-top">
+                                <h4>Valentina Rossi</h4>
+                                <span class="time">Mar</span>
+                            </div>
+                            <p>Jocoso.</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <img src="https://i.pravatar.cc/150?u=friends4" alt="Avatar" class="contact-avatar">
+                        <div class="contact-info">
+                            <div class="contact-top">
+                                <h4>Mateo Silva</h4>
+                                <span class="time">Lun</span>
+                            </div>
+                            <p>Gracias, posta.</p>
+                        </div>
+                    </div>
+                </div>
+            </aside>
         </main>
     </div>
     <script src="../js/layout.js"></script>
 </body>
+
 </html>

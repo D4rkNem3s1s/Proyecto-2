@@ -15,19 +15,19 @@
             "task": "Mockup de Amigos",
             "done": true,
             "assignee": "Santiago"
-        }
-    ],
-    "pendientes": [
+        },
         {
             "task": "Mockup de Mensajes",
-            "done": false,
+            "done": true,
             "assignee": "Santiago"
         },
         {
             "task": "Terminar páginas de registro y login",
             "done": false,
             "assignee": "Thomas"
-        },
+        }
+    ],
+    "pendientes": [
         {
             "task": "Tags de gustos (Shank, ¿Qué significa eso?)",
             "done": false,
