@@ -3,33 +3,45 @@
     "sprint_actual": [
         {
             "task": "Feeds (Social/Global)",
-            "done": true
+            "done": true,
+            "assignee": "Santiago"
         },
         {
             "task": "Header & Sidebar",
-            "done": true
+            "done": true,
+            "assignee": "Santiago"
         }
     ],
     "pendientes": [
         {
             "task": "Mockup de Mensajes",
-            "done": false
+            "done": false,
+            "assignee": "Santiago"
         },
         {
             "task": "Mockup de Amigos",
-            "done": false
+            "done": false,
+            "assignee": "Santiago"
         },
         {
             "task": "Terminar páginas de registro y login",
-            "done": false
+            "done": false,
+            "assignee": "Thomas"
         },
         {
-            "task": "Tags de gustos, shank",
-            "done": false
+            "task": "Tags de gustos (Shank, ¿Qué significa eso?)",
+            "done": false,
+            "assignee": "Thomas"
+        },
+        {
+            "task": "Modal de configuración",
+            "done": false,
+            "assignee": "Thomas"
         },
         {
             "task": "Empezar el backend",
-            "done": false
+            "done": false,
+            "assignee": "Todos"
         }
     ]
 }

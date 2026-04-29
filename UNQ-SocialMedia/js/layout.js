@@ -127,18 +127,22 @@ async function fetchRoadmap() {
 
         html += `<div class="roadmap-section"><h4>[Sprint Actual]</h4><ul class="roadmap-list">`;
         data.sprint_actual.forEach(item => {
+            const assigneeHtml = item.assignee ? `<span class="assignee-badge">${item.assignee}</span>` : '';
             html += `<li class="roadmap-item">
                 <input type="checkbox" ${item.done ? 'checked' : ''} disabled>
                 <span class="${item.done ? 'done' : ''}">${item.task}</span>
+                ${assigneeHtml}
             </li>`;
         });
         html += `</ul></div>`;
 
         html += `<div class="roadmap-section"><h4>[Pendientes]</h4><ul class="roadmap-list">`;
         data.pendientes.forEach(item => {
+            const assigneeHtml = item.assignee ? `<span class="assignee-badge">${item.assignee}</span>` : '';
             html += `<li class="roadmap-item">
                 <input type="checkbox" ${item.done ? 'checked' : ''} disabled>
                 <span class="${item.done ? 'done' : ''}">${item.task}</span>
+                ${assigneeHtml}
             </li>`;
         });
         html += `</ul></div>`;

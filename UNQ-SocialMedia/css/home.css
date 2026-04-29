@@ -535,6 +535,19 @@ main {
     color: #6a9955;
 }
 
+.assignee-badge {
+    background: #2d2d30;
+    border: 1px solid #3e3e42;
+    color: #9cdcfe;
+    padding: 2px 6px;
+    border-radius: 10px;
+    font-size: 9px;
+    margin-left: auto;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+}
+
 .roadmap-footer {
     padding: 10px 15px;
     background: #252526;
