@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,11 +9,106 @@
     <link rel="stylesheet" href="../css/friends.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
+
 <body>
     <div class="app-container">
         <header id="main-header"></header>
         <nav id="main-sidebar"></nav>
+        <main>
+            <div class="page-header">
+                <h2>Conexiones</h2>
+                <div class="local-search">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Buscar amigos...">
+                </div>
+            </div>
+
+            <div class="friends-tabs">
+                <button class="tab-btn active" data-target="mis-amigos">Mis amigos</button>
+                <button class="tab-btn" data-target="solicitudes">Solicitudes <span class="badge">2</span></button>
+                <button class="tab-btn" data-target="sugerencias">Sugerencias</button>
+            </div>
+
+            <div id="mis-amigos" class="friends-grid tab-content active">
+                <div class="friend-card">
+                    <img src="https://i.pravatar.cc/150?u=friends1" alt="Avatar" class="friend-avatar">
+                    <div class="friend-info">
+                        <h3>Martina González</h3>
+                        <p>Licenciatura en Informática</p>
+                    </div>
+                    <div class="friend-actions">
+                        <a href="messages.html" class="btn btn-primary btn-sm">Mensaje</a>
+                        <button class="btn btn-outline btn-sm">Eliminar</button>
+                    </div>
+                </div>
+
+                <div class="friend-card">
+                    <img src="https://i.pravatar.cc/150?u=friends2" alt="Avatar" class="friend-avatar">
+                    <div class="friend-info">
+                        <h3>Lucas Fernández</h3>
+                        <p>Tecnicatura en Programación</p>
+                    </div>
+                    <div class="friend-actions">
+                        <a href="messages.html" class="btn btn-primary btn-sm">Mensaje</a>
+                        <button class="btn btn-outline btn-sm">Eliminar</button>
+                    </div>
+                </div>
+
+                <div class="friend-card">
+                    <img src="https://i.pravatar.cc/150?u=friends3" alt="Avatar" class="friend-avatar">
+                    <div class="friend-info">
+                        <h3>Valentina Rossi</h3>
+                        <p>Licenciatura en Biotecnología</p>
+                    </div>
+                    <div class="friend-actions">
+                        <a href="messages.html" class="btn btn-primary btn-sm">Mensaje</a>
+                        <button class="btn btn-outline btn-sm">Eliminar</button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="solicitudes" class="friends-grid tab-content" style="display: none;">
+                <div class="friend-card">
+                    <img src="https://i.pravatar.cc/150?u=friends4" alt="Avatar" class="friend-avatar">
+                    <div class="friend-info">
+                        <h3>Mateo Silva</h3>
+                        <p>No se me ocurren más</p>
+                    </div>
+                    <div class="friend-actions">
+                        <button class="btn btn-primary btn-sm">Aceptar</button>
+                        <button class="btn btn-outline btn-sm">Rechazar</button>
+                    </div>
+                </div>
+
+                <div class="friend-card">
+                    <img src="https://i.pravatar.cc/150?u=friends5" alt="Avatar" class="friend-avatar">
+                    <div class="friend-info">
+                        <h3>Sofía Martínez</h3>
+                        <p>Licenciatura en Informática</p>
+                    </div>
+                    <div class="friend-actions">
+                        <button class="btn btn-primary btn-sm">Aceptar</button>
+                        <button class="btn btn-outline btn-sm">Rechazar</button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="sugerencias" class="friends-grid tab-content" style="display: none;">
+                <div class="friend-card">
+                    <img src="https://i.pravatar.cc/150?u=friends6" alt="Avatar" class="friend-avatar">
+                    <div class="friend-info">
+                        <h3>Joaquín López</h3>
+                        <p>Tecnicatura en Programación</p>
+                    </div>
+                    <div class="friend-actions">
+                        <button class="btn btn-primary btn-sm">Agregar amigo</button>
+                    </div>
+                </div>
+            </div>
+        </main>
     </div>
     <script src="../js/layout.js"></script>
+    <script src="../js/friends.js"></script>
 </body>
+
 </html>

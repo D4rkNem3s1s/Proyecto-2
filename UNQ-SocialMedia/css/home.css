@@ -335,6 +335,7 @@ main {
     cursor: pointer;
     transition: transform 0.1s, background 0.2s;
     border: none;
+    text-align: center;
 }
 
 .btn:active {
